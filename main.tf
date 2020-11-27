@@ -77,5 +77,5 @@ output "public-id" {
 }
 
 data "template_file" "linux-vm-cloud-init" {
-  template = file("init-script.sh")
+  template = "${file("${path.module}/init-script.sh")}"
 }
